@@ -1,10 +1,27 @@
 baseURL: "https://blog.alfie.com"
 title: "Alfie's Blog"
-LanguageCode: "en-US"
+defaultContentLanguage: "zh-cn"  # 替换原来的 LanguageCode
 theme: "PaperMod"
+
+# 添加 Markdown 渲染配置
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # 允许渲染原始HTML标签
+
+# 忽略特定警告信息
+ignoreErrors: 
+  - error-remote-getjson
+
+ignoreLogs:
+  - warning-goldmark-raw-html
+
 
 # 启用首页个人简介展示
 params:
+  # 文章许可
+  license: "CC BY 4.0"
+  license_link: "https://creativecommons.org/licenses/by/4.0/"
   # 是否启用评论。你需要自己配置，或者直接引入Giscus等评论系统
   comments: false
   # 是否显示代码复制按钮
@@ -28,6 +45,25 @@ params:
     Content: >
       I am alfie.I'm from mainland China, and I'm currently studying at a language school in Tokyo.
       I'll share some of my life and notes on technology here, and I hope it can be helpful to you!
+    # Cookie consent 设置
+  cookieConsent:
+    enable: true
+    type: opt-in  # 确保是opt-in模式
+    layout: basic
+    content:
+      message: "本站使用Cookie来提供更好的浏览体验。"
+      dismiss: "同意"
+      link: "了解更多"
+      href: "/cookie-policy/"
+  
+  # 添加GDPR合规声明
+  privacy:
+    enabled: true     # 确保为true
+    hasCookie: true   # 确保为true
+    httpCookies:
+      enable: true
+      content: "本网站使用Cookie和类似技术来改善您的体验。继续使用本站即表示您同意我们的Cookie使用政策。"
+
 
   # 设置网站头像和首页头像
   profileMode:
