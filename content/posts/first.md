@@ -1,6 +1,6 @@
 ---
 title: Hello World
-published: 2025-03-13T22:32:44+09:00
+date: 2025-03-13T22:32:44+09:00
 summary: "It's my first blog"
 cover:
   image: "文章封面图。也支持HTTPS"
