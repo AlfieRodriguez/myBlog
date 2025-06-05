@@ -1,6 +1,6 @@
 ---
 title: {{ replace .File.ContentBaseName "-" " " | title }}
-published: {{ .Date }}
+date: {{ .Date }}
 summary: "文章简介"
 cover:
   image: "文章封面图。也支持HTTPS"
